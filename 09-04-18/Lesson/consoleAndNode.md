@@ -6,3 +6,5 @@
 3. node {file}
 
 ### Github and the Console
+1. git init
+2. git status (checks what you have to commit etc.)
