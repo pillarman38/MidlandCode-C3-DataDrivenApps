@@ -1,0 +1,4 @@
+
+<app-add-todo (addTodoEvent)="addTodo($event)"></app-add-todo>
+
+<app-list-todos (deleteTodoEvent)="deleteTodo($event)" [todos]="todos"></app-list-todos>

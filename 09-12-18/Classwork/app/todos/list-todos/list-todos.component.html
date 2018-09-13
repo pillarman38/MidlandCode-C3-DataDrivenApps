@@ -1,0 +1,5 @@
+<h2>List of Todos</h2>
+<div *ngFor="let todo of todos">
+  <a [class.mike]="todo.username == 'mike'" [routerLink]="['/user', todo.username.toLowerCase()]">{{todo.username}}</a>, {{todo.todo}}, {{todo.id}}
+  <button (click)="deleteTodo(todo.id)">Delete</button>
+</div>
