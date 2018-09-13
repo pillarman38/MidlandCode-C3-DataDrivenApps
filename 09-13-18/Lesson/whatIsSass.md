@@ -62,4 +62,93 @@ Now obviously this is fairly straight forward, but lets say you have a ton more 
 
 ### Declaring Variables in SASS
 
-Let's say you 
+One of the most useful additions with the use of SASS is the ability to declare variables as well as what are referred to as `mixins` and `extend(s)`. Not only are these both incredibly useful but they are also very easy to declare.
+
+#### Variables
+* Think about an app that might have a primary color, accent color, and text color. With basic CSS you would have to actually declare the value (hex, rgb/rgba, cyk, etc.) each time you want to use that color. So with a primary color of `#4432AF` you would actually have to type that in EVERY use of that color. Not that big of a deal but what happens if you need to change the color? You would have to change it EVERYWHERE.
+* Taking the above example you can simply declare a primary-color variable then use that in SASS. To declare a variable it is as simple as `$primary-color: #4432AF`. 
+* To use that color anywhere in your SASS you need to do 1 (or two depending on the location of the actual variable declaration)
+    1. If the variable declaration is in the same SASS file, skip to step 2. Otherwise include an `@import pathtofilewithvariable` at the top of your sass file using the variable.
+    2. Replace the `#4432AF` with `$primary-color`. This would then look like `background-color: $primary-color;`
+* Any time you change the value of primary-color it updates every appearance of the variable at declaration.
+
+
+#### Mixins - The functions of SASS
+* Let's say you have a series of CSS that you will repeat a lot but with different values such as:
+    ``` CSS
+        .someClass{
+            margin: 10px;
+            height: 10px;
+            width: 10px;
+        }
+        .someOtherClass{
+            margin: 5px;
+            height: 5px;
+            width: 5px;
+        }
+    ```
+* If you want to follow DRY principles then you can use a mixin for that! You would declare it as:
+    ``` SCSS
+        @mixin nameOfMixin($value){
+            margin: $value;
+            height: $value;
+            width: $value;
+        }
+    ```
+* You could then simply call the mixin with the appropriate values and simplify the first example as:
+    ``` SCSS
+        .someClass{ @include nameOfMixin(10px)}
+        .someOtherClass{ @include nameOfMixin(5px)}
+    ```
+
+#### Extends - We must make it DRYer!
+
+* So what happens if you don't need to have different values but you'll be repeating parts of the same code verbatim for different selectors?
+* Enter the extend! Assume you have the following code:
+    ``` CSS
+        .someClass{
+            margin: 10px;
+            height: 10px;
+            width: 10px;
+            background-color: orange;
+        }
+        .someOtherClass{
+            margin: 10px;
+            height: 10px;
+            width: 10px;
+            background-color: black;
+        }
+    ```
+* Sure you could just refactor it as below, but that defeats the purpose of clean organization in SASS
+    ``` CSS
+        .someClass, .someOtherClass{
+            margin: 10px;
+            height: 10px;
+            width: 10px;
+        }
+        .someClass{
+            background-color: orange;
+        }
+        .someOtherClass{
+            background-color: black;
+        }
+    ```
+* For the above you should declare an extend and reuse it. This can easily be done as follows: 
+    ``` SCSS
+        %equal-size{
+            margin: 10px;
+            height: 10px;
+            width: 10px;
+        }
+    ```
+* Then just call it as follows: 
+    ``` SCSS
+        .someClass{
+            @extend %equal-size;
+            background-color: orange;
+        }
+        .someOtherClass{
+            @extend %equal-size;
+            background-color: black;
+        }
+    ```
