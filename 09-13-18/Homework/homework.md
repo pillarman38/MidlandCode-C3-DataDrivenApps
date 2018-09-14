@@ -8,7 +8,9 @@
 4. In the main `app.component.html` file have a top level menu to go to the above three routes.
 5. Add a trivia service to get trivia questions as well as check if the answers were correct
 6. The service should have the following functionality:
-    1. Should return 4 random 
+    1. Should return 4 random questions
+    2. Should take a question id and answer and check if the answer is correct
+    3. Should be able to add questions to the array of questions. 
 7. The Components:
     1. About Page - This should just be simple html with no major functionality. Make sure you have some information about your page
     2. Submit New Questions Page should do the following:
@@ -20,7 +22,7 @@
         3. Clear out the fields after successful submission.
     3. Trivia Page should have the following funcitonality: 
         1. Call the trivia service and get four random questions from the service.
-        2. Pass the random questions to the question sub component should should: 
+        2. Pass the random questions to the question sub component which should: 
             1. Display the active question with the three possible options as buttons
             2. When a button is clicked it should pass the button clicked to the parent.
             3. The parent should then verify if the question was answered correctly via the service. And internally increment the score by 1 if it was correct.
@@ -35,14 +37,14 @@
 
 ``` javascript
     [
-        {q: 'What is the capital of Nebraska?', wrongAnswers: [{a: 'Omaha'}, {a: 'Des Moines'}, {a: 'Kearney'}], correctAnswer: 'Lincoln'},
-        {q: 'What is 2 + 2?', wrongAnswers: [{a: '5'}, {a: '64'}, {a: '22'}], correctAnswer: '4'},
-        {q: 'What color is an eggplant?', wrongAnswers: [{a: 'Orange'}, {a: 'Green'}, {a: 'Blue'}], correctAnswer: 'Purple'},
-        {q: 'Which is not a bear in North America?', wrongAnswers: [{a: 'Black Bear'}, {a: 'Grizzly Bear'}, {a: 'Spirit Bear'}], correctAnswer: 'Spectacled Bear'},
-        {q: 'How do you say hello in Spanish?', wrongAnswers: [{a: 'Hello'}, {a: 'Halo'}, {a: 'Hela'}], correctAnswer: 'Hola'},
-        {q: 'What year is this?', wrongAnswers: [{a: '2017'}, {a: '2019'}, {a: '2020'}], correctAnswer: '2018'},
-        {q: 'Who is the Aztec god of war?', wrongAnswers: [{a: 'Quetzalcoatl'}, {a: 'Xipe Totec'}, {a: 'Tlaloc'}], correctAnswer: 'Huitzilopochtli'},
-        {q: 'What is Batmans secret identity', wrongAnswers: [{a: 'Clark Kent'}, {a: 'Wally West'}, {a: 'John Stewart'}], correctAnswer: 'Bruce Wayne'},
-        {q: 'Is Angular Easy?', wrongAnswers: [{a: 'Definitely'}, {a: '100% Guaranteed'}, {a: 'Absolutely'}], correctAnswer: 'Nope'}
+        {q: 'What is the capital of Nebraska?', wrongAnswers: [{a: 'Omaha'}, {a: 'Des Moines'}, {a: 'Kearney'}], correctAnswer: 'Lincoln', id:0},
+        {q: 'What is 2 + 2?', wrongAnswers: [{a: '5'}, {a: '64'}, {a: '22'}], correctAnswer: '4', id:1},
+        {q: 'What color is an eggplant?', wrongAnswers: [{a: 'Orange'}, {a: 'Green'}, {a: 'Blue'}], correctAnswer: 'Purple', id:2},
+        {q: 'Which is not a bear in North America?', wrongAnswers: [{a: 'Black Bear'}, {a: 'Grizzly Bear'}, {a: 'Spirit Bear'}], correctAnswer: 'Spectacled Bear', id:3},
+        {q: 'How do you say hello in Spanish?', wrongAnswers: [{a: 'Hello'}, {a: 'Halo'}, {a: 'Hela'}], correctAnswer: 'Hola', id:4},
+        {q: 'What year is this?', wrongAnswers: [{a: '2017'}, {a: '2019'}, {a: '2020'}], correctAnswer: '2018', id:5},
+        {q: 'Who is the Aztec god of war?', wrongAnswers: [{a: 'Quetzalcoatl'}, {a: 'Xipe Totec'}, {a: 'Tlaloc'}], correctAnswer: 'Huitzilopochtli', id:6},
+        {q: 'What is Batmans secret identity', wrongAnswers: [{a: 'Clark Kent'}, {a: 'Wally West'}, {a: 'John Stewart'}], correctAnswer: 'Bruce Wayne', id:7},
+        {q: 'Is Angular Easy?', wrongAnswers: [{a: 'Definitely'}, {a: '100% Guaranteed'}, {a: 'Absolutely'}], correctAnswer: 'Nope', id:8}
     ]
 ```
