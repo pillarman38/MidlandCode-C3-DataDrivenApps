@@ -1,0 +1,11 @@
+[
+    {"q": "What is the capital of Nebraska?", "wrongAnswers": [ "Omaha",  "Des Moines",  "Kearney"], "correctAnswer": "Lincoln", "id":0},
+    {"q": "What is 2 + 2?", "wrongAnswers": [ "5",  "64",  "22"], "correctAnswer": "4", "id":1},
+    {"q": "What color is an eggplant?", "wrongAnswers": [ "Orange",  "Green",  "Blue"], "correctAnswer": "Purple", "id":2},
+    {"q": "Which is not a bear in North America?", "wrongAnswers": [ "Black Bear",  "Grizzly Bear",  "Spirit Bear"], "correctAnswer": "Spectacled Bear", "id":3},
+    {"q": "How do you say hello in Spanish?", "wrongAnswers": [ "Hello",  "Halo",  "Hela"], "correctAnswer": "Hola", "id":4},
+    {"q": "What year is this?", "wrongAnswers": [ "2017",  "2019",  "2020"], "correctAnswer": "2018", "id":5},
+    {"q": "Who is the Aztec god of war?", "wrongAnswers": [ "Quetzalcoatl",  "Xipe Totec",  "Tlaloc"], "correctAnswer": "Huitzilopochtli", "id":6},
+    {"q": "What is Batmans secret identity", "wrongAnswers": [ "Clark Kent",  "Wally West",  "John Stewart"], "correctAnswer": "Bruce Wayne", "id":7},
+    {"q": "Is Angular Easy?", "wrongAnswers": [ "Definitely",  "100% Guaranteed",  "Absolutely"], "correctAnswer": "Nope", "id":8}
+]
