@@ -1,0 +1,13 @@
+<div class="container">
+    <h3 class="accent-font center">Final Score: {{numCorrect}}</h3>
+    <h3 class="accent-font center">You only got {{numCorrect/4 | percent}} correct. {{getResponse()}}</h3>
+    <div class="incorrect-container" *ngIf="incorrectGuesses.length > 0">
+        <h3 class="center primary-font-dark">You got the following wrong:</h3>
+        <div class="incorrect light-font accent-bg" *ngFor="let incorrect of incorrectGuesses">
+            <p>Question: {{incorrect.q}}</p>
+            <p>Correct Answer: {{incorrect.correct}}</p>
+            <p>Your Guess: {{incorrect.guess}}</p>
+        </div>
+    </div>
+    <button class="primary-bg light-font" (click)="restart()">Try Again?</button>
+</div>

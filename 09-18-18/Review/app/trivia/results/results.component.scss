@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+button{
+    margin: auto;
+    cursor: pointer;
+    min-height: 50px;
+    margin: 10px 30%;
+    width: calc(40% - 2px);
+    border: 1px solid $accent;
+    &:hover{
+        color: $primary-dark;
+        border-color: $primary-dark;
+        background-color: $secondary;
+    }
+}
+
+
+.incorrect{
+    width: calc(75% - 4px);
+    margin: 10px 12.5%;
+    border: 2px solid $primary-dark;
+    text-align: center;
+    p{
+        margin: 2px;
+    }
+    
+}

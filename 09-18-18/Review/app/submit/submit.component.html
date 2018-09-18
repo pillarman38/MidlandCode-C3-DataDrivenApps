@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="form-container">
+  <label for="question">Question:</label>
+  <input id="question" [(ngModel)]="question.q" placeholder="Question">
+  <label for="correctAnswer">Correct Answer:</label>
+  <input id="correctAnswer" [(ngModel)]="question.correctAnswer" placeholder="Correct Answer">
+      <label for="wrongAnswer0">Wrong Answer 1:</label>
+      <input id="wrongAnswer0" [(ngModel)]="question.wrongAnswers[0]" placeholder="Wrong Answer #1">
+      <label for="wrongAnswer1">Wrong Answer 2:</label>
+      <input id="wrongAnswer1" [(ngModel)]="question.wrongAnswers[1]" placeholder="Wrong Answer #2">
+      <label for="wrongAnswer2">Wrong Answer 3:</label>
+      <input id="wrongAnswer2" [(ngModel)]="question.wrongAnswers[2]" placeholder="Wrong Answer #3">
+      <div *ngIf="errorMsg.length > 0">
+          <h3 class="center error">Fix these errors and try again:</h3>
+          <div class="error center" *ngFor="let err of errorMsg">{{err}}</div>
+        </div>
+      </div>
+    <button (click)="addQuestion()" class="primary-bg light-font">Submit Question</button>
+
+
+</div>

@@ -1,0 +1,30 @@
+@import '../styles/variables';
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $primary;
+    border-bottom: 1px solid $light;
+    a{
+        color: $light;
+        height: 30px;
+        line-height: 30px;
+        float: left;
+        width: calc(100% / 3);
+        text-decoration: none;
+        &:hover:not(.active){
+            background-color: $primary-dark;
+        }
+        &.active{
+            color: black;
+            background-color: $accent;
+        }
+        &:not(:last-child){
+            border-right: 1px solid $light;
+            width: calc(100% / 3 - 1px);
+        }
+    }
+
+}

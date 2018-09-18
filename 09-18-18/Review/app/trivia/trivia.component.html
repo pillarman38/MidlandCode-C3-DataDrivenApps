@@ -1,0 +1,3 @@
+<trivia-questions *ngIf="isAnswering" (checkAnswerEvent)="checkAnswer($event)" [numCorrect]="numCorrect" [question]="questions[activeQuestion]"></trivia-questions>
+
+<trivia-results *ngIf="!isAnswering" (restartEvent)="restart($event)" [numCorrect]="numCorrect" [incorrectGuesses]="incorrectGuesses"></trivia-results>

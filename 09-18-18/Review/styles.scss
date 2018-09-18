@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/styles/variables';
+
+body{
+    background-color: $light;
+}
+
+.container{
+    margin-top: 35px;
+}
+
+// Font Colors
+
+.accent-font{
+    color: $accent;
+}
+
+.primary-font{
+    color: $primary;
+}
+
+.secondary-font{
+    color: $secondary;
+}
+
+.primary-dark-font{
+    color: $primary-dark
+}
+
+.light-font{
+    color: $light;
+}
+
+// Background Colors
+
+.accent-bg{
+    background-color: $accent;
+}
+
+.primary-bg{
+    background-color: $primary;
+}
+
+.secondary-bg{
+    background-color: $secondary;
+}
+
+.primary-dark-bg{
+    background-color: $primary-dark
+}
+
+.light-bg{
+    background-color: $light;
+}
+
+
+// TYPOGRAPHY
+
+.center{
+    text-align: center;
+}

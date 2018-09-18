@@ -40,7 +40,7 @@ in SASS it could be shown written as:
     .parent{
         background-color: black;
 
-        :not(.anotherClass){
+        &:not(.anotherClass){
             text-transform: capitalize;
         }
         .child1{

@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+.button-container{
+    display: flex;
+    width: 80%;
+    margin: 0 10%;
+    flex-flow: row wrap;
+    button{
+        cursor: pointer;
+        min-height: 50px;
+        margin: 10px 2.5%;
+        flex-basis: 45%;
+        border: 1px solid $accent;
+        &:hover{
+            color: $primary-dark;
+            border-color: $primary-dark;
+            background-color: $secondary;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import '../styles/variables';
+button{
+    margin: auto;
+    cursor: pointer;
+    min-height: 30px;
+    margin: 10px 30%;
+    width: calc(40% - 2px);
+    border: 1px solid $accent;
+    &:hover{
+        color: $primary-dark;
+        border-color: $primary-dark;
+        background-color: $secondary;
+    }
+}
+.error{
+    color: red;
+}
+.form-container{
+    width: 100%;
+    margin: 0;
+    float: left;
+}
+label{
+    margin-top: 10px;
+    width: 50%;
+    float: left;
+    cursor: pointer;
+    color: $primary-dark;
+}
+input{
+    padding: 5px;
+    float: left;
+    border: 1px solid $primary-dark;
+    background-color: $accent;
+    color: white;
+    width: calc(100% - 12px);
+    height: 20px;
+    &::placeholder{
+        color: $light;
+    }
+
+}

@@ -1,0 +1,12 @@
+<div class="container">
+  <h3 class="accent-font center">Current Score: {{numCorrect}}</h3>
+<h1 class="center primary-dark-font">{{question.q}}</h1>
+
+<div class="button-container">
+  <button *ngFor="let answer of question.a" (click)="checkAnswer(question.id, answer)" class="primary-bg light-font">{{answer}}</button>
+
+
+</div>
+
+
+</div>
