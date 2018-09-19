@@ -1,0 +1,16 @@
+<div class="form">
+<label for="name">Name</label>
+<input id="name">
+<label for="contactNumber">Number</label>
+<input id="contactNumber">
+<br>
+<input type="radio" [(ngModel)]="reason" id="reason1" name="reason" value="suggestion"><label for="reason1">Suggestion</label>
+<input type="radio" [(ngModel)]="reason" id="reason2" name="reason" value="complaint"><label for="reason2">Complaint</label>
+<input type="radio" [(ngModel)]="reason" id="reason3" name="reason" value="comment"><label for="reason3">Comment</label>
+<br>
+<br>
+<label for="comments">{{reason | titlecase}}</label>
+<textarea></textarea>
+
+  <button></button>
+</div>
