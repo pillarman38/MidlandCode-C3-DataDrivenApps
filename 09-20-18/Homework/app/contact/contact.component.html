@@ -1,0 +1,36 @@
+<div class="form">
+<label for="name">Name</label>
+<input id="name" [(ngModel)]="contact.name">
+<label for="number">Number</label>
+<input id="number" [(ngModel)]="contact.number">
+<br>
+<input type="radio" [(ngModel)]="contact.reason" id="reason1" name="reason" value="suggestion"><label for="reason1">Suggestion</label>
+<input type="radio" [(ngModel)]="contact.reason" id="reason2" name="reason" value="complaint"><label for="reason2">Complaint</label>
+<input type="radio" [(ngModel)]="contact.reason" id="reason3" name="reason" value="comment"><label for="reason3">Comment</label>
+<br>
+<br>
+<label for="comments">{{contact.reason | titlecase}}</label>
+<textarea id="comments" [(ngModel)]="contact.message"></textarea>
+
+  <button (click)="submitForm()">Submit {{contact.reason | titlecase}}</button>
+</div>
+My Birthday is 01/01/1980
+<div [birthday]="'09/23/1982'" class="birthday" style="height: 100px; width: 100px"> 
+    09/23/1982
+</div>
+
+<div [birthday]="'01/08/1991'" class="birthday" style="height: 100px; width: 100px"> 
+  01/08/1991
+</div>
+
+<div [birthday]="'03/21/1975'" class="birthday" style="height: 100px; width: 100px"> 
+  03/21/1975
+</div>
+
+<div [birthday]="'10/31/2001'" class="birthday" style="height: 100px; width: 100px"> 
+  10/31/2001
+</div>
+
+<div [birthday]="'12/25/1952'" class="birthday" style="height: 100px; width: 100px"> 
+  12/25/1952
+</div>

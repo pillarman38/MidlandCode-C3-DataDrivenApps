@@ -1,0 +1,8 @@
+.is-older{
+    background-color: black;
+    color: red;
+}
+
+.missed{
+    border: 1px solid red;
+}

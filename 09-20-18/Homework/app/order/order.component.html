@@ -1,0 +1,7 @@
+<ng-container *ngIf="selectingOptions; then selecting else paying"></ng-container>
+<ng-template #paying>
+  <payment-component></payment-component>
+</ng-template>
+<ng-template #selecting>
+<selections-component></selections-component>
+</ng-template>
