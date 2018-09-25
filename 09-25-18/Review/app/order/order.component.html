@@ -1,0 +1,8 @@
+<ng-container *ngIf="selectingOptions; then selecting else paying"></ng-container>
+<ng-template #paying>
+  <payment-component [selections]="selections" (gotoSelectionEvent)="toggleView($event)" (submitPaymentEvent)="completePayment($event)"></payment-component>
+</ng-template>
+<ng-template #selecting>
+  <selections-component [selections]="selections" (gotoPaymentEvent)="toggleView($event)" (updateSelectionEvent)="updateSelection($event)"
+    (removePizzaEvent)="removePizza($event)"></selections-component>
+</ng-template>

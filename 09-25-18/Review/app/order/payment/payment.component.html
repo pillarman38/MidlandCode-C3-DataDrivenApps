@@ -1,0 +1,47 @@
+<h3 class="col-12">Current Pizzas: </h3>
+<div class="d-flex flex-row row-wrap">
+  <div *ngFor="let pizza of selections; index as idx" class="my-4 col-6">
+    <h4 class="col-12">Size: {{pizza.size | titlecase}}</h4>
+    <h4 class="col-12">Price: {{pizza.price | currency}}</h4>
+    <h4 class="col-12" *ngIf="pizza.toppings.length >0">Toppings:
+      <ul>
+        <li *ngFor="let topping of pizza.toppings">{{topping}}</li>
+      </ul>
+    </h4>
+    <h4 class="col-12" *ngIf="pizza.toppings.length <=0">No toppings</h4>
+  </div>
+</div>
+<hr>
+<h3 class="text-right col-12">
+  Total: {{total | currency}}
+</h3>
+
+<h3 class="text-center">Payment Information</h3>
+<form class="col-12">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input name="name" class="form-control" [(ngModel)]="payment.name" id="name">
+  </div>
+  <div class="form-group">
+    <label for="ccNumber">CC Number</label>
+    <input name="ccNumber" class="form-control" [(ngModel)]="payment.ccNumber" id="ccNumber">
+  </div>
+  <div class="form-group">
+    <label for="city">City</label>
+    <input name="city" class="form-control" [(ngModel)]="payment.city" id="city">
+  </div>
+  <div class="form-group">
+    <label for="state">State</label>
+    <input name="state" class="form-control" [(ngModel)]="payment.state" id="state">
+  </div>
+  <div class="form-group">
+    <label for="zipcode">Zip</label>
+    <input name="zipcode" class="form-control" [(ngModel)]="payment.zipcode" id="zipcode">
+  </div>
+  <br>
+  <br>
+  <div class="col-12 my-4">
+    <button class="btn btn-warning col-5" (click)="back()">Back to Order</button>
+    <button class="btn btn-success col-5 offset-2" (click)="submit()">Submit</button>
+  </div>
+</form>
