@@ -61,4 +61,14 @@
       <router-outlet #outlet="outlet"></router-outlet>
     </div>
     ```
+* This is all well and good but what does prepareRoute mean? Basically you have to get the router-outlet you built access to above and here's the example from the Angular docs for what that preparer might look like: 
+    ``` typescript
+        prepareRoute(outlet: RouterOutlet) {
+        return outlet && outlet.activatedRouteData && 
+        outlet.activatedRouteData['animation'];
+        }
+    ```
+
 * Next define the animation as you would normally. You can use the `query` function to see which state is entering or leaving. `query(':enter')` or `query(':leave')`
+* You'll also want to use the `group()` function to ensure all animations run concurrently.
+* Utilize the `animateChild()` function if your components entering and leaving ALSO have animations you want to show.
