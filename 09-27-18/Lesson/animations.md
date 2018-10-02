@@ -16,6 +16,28 @@
 * So now we have two states that just switch on or off but just happen immediately with no nice clean movement. We need to set up some transitions. This is done via: ` transition('firstState => secondState', [animate('duration delay easing')])` Instead of `=>` you could also use `<=>` if you want that animation for bot directions.
 * Final step is to take the states and the transitions and wrap them in a trigger. This is done like: `trigger('nameOfAnimation', [array of states and transitions])`
 * Finally we can simply add it to the element we want to be styled as a one way bound attribute: `<div [@nameOfAnimation]="expression to determine which state it is">`
+``` typescript
+     trigger('openClose', [
+      // ...
+      state('open', style({
+        height: '200px',
+        opacity: 1,
+        backgroundColor: 'yellow'
+      })),
+      state('closed', style({
+        height: '100px',
+        opacity: 0.5,
+        backgroundColor: 'green'
+      })),
+      transition('open => closed', [
+        animate('1s')
+      ]),
+      transition('closed => open', [
+        animate('0.5s')
+      ])
+    ])
+  ]
+```
 
 
 ## What about reusable animations?

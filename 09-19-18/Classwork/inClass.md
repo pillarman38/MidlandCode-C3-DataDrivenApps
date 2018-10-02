@@ -14,7 +14,7 @@ Utilize files in 09-19-18/Classwork/app as a starting point
             * Calculates Costs with tax
             * Takes payment data (fake) and sends it to a service
 * About Component - Just info with no functionality
-* Menu COomponent - All the Menu Items, no functionality
+* Menu Component - All the Menu Items, no functionality
 * Contact Component
     * Has a field for a  user to submit contact information
     * Connects with a ContactService (doesn't actually connect to an API) that sends data to a "database"
