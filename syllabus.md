@@ -7,15 +7,15 @@
 
 | WEEK | TOPIC                                                                             |
 |------|-----------------------------------------------------------------------------------|
-| 1    | What is a framework? <br> Introduction to Angular <br> Project Structure <br> JS imports |
-| 2    | Intro to Single Page Applications <br> Routing <br> Data binding <br> Angular events     |
-| 3    | Providers <br> Angular control directives <br> Makes/pipes  <h3><b> Assignment </b></h3>           |
-| 4    | LocalStorage <br> CSS in Angular <br> SASS                                            |
-| 5    | Animations <br> Intro to Asynchronous programming                                  |
-| 6    | Observables <br> Promises <br> Subscription <br> Resolvers                               |
-| 7    | Databases <br> Postgres <br> SQL <br> Node/Express                                       |
-| 8    | Deployment <br> Cumulative Components                                              |
-| 9    | Object Interfaces <br> APIs <br> HTTP library                                         |
-| 10   | Collaborative Group Project                                                     |
-| 11   | Final Project                                                                   |
-| 12   | Final Project                                                                   |
+| 1    | What is a framework? <br> Introduction to Angular <br> Project Structure <br> JS imports <br> Intro to Single Page Applications |
+| 2    |  Routing <br> Data binding <br> Angular events <br> Angular control directives <br> Providers |
+| 3    |  Makes/pipes <br> LocalStorage <br> CSS in Angular <br> SASS <h3><b> Assignment </b></h3> |
+| 4    |  Form Validation <br> AuthGuards <br>  Animations |
+| 5    |  Intro to Asynchronous programming  <br> Observables <br> Promises <br> Subscription <br> Resolvers |
+| 6    | Object Interfaces <br> APIs <br> HTTP library |
+| 7    | Databases <br> Postgres <br> SQL <br> Node/Express |
+| 8    | Deployment <br> State Management Intro |
+| 9    | Redux/Flux <br> Stores <br> Actions <br> Reducers |
+| 10   | Collaborative Group Project / New Fresh Topics |
+| 11   | Final Project |
+| 12   | Final Project  |
