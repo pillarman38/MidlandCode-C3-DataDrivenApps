@@ -1,0 +1,8 @@
+<nav class="nav nav-tabs">
+  <a routerLink="/" routerLinkActive="active" class="nav-link" [routerLinkActiveOptions]="{exact: true}">Home</a>
+  <a routerLink="/about" routerLinkActive="active" class="nav-link" >About</a>
+  <a routerLink="/todos" routerLinkActive="active" class="nav-link" >Todos</a>
+</nav>
+<div class="page-container" [@routeAnimations]="prepareRoute(outlet)" >
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>

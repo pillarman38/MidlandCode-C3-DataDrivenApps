@@ -1,0 +1,33 @@
+<div class="col-12 row">
+<h3 class="col-12 text-center">Add Todo</h3>
+<form class="col-12" [formGroup]="todoForm" (ngSubmit)="addTodo()">
+  <div class="form-group">
+  <input class="form-control" placeholder="Name of Todo" formControlName="name">
+  <div class="alert alert-danger" *ngIf="name.errors && (name.touched || name.dirty)">Name is required.</div>
+</div>
+<div class="form-group">
+  <input class="form-control" placeholder="Todo Category" formControlName="category">
+  <div *ngIf="category.errors  && (category.touched || category.dirty)">
+    <div class="alert alert-danger" *ngIf="category.errors.required">Category is required.</div>
+    <div class="alert alert-danger" *ngIf="category.errors.bannedWord">Category cannot contain "{{category.errors.bannedWord.word}}".</div>
+  </div>
+</div>
+<button type="submit" class="float-right btn btn-primary">Add Todo</button>
+</form>
+<div class="row col-12" *ngIf="todos.length > 0">
+  <h3 class="col-12 text-center">Todos: </h3>
+  <table class="table text-center">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Completed</th>
+    </tr>
+    <tr *ngFor="let todo of todos"  [@toGreen]="todo.completed ? 'completed' : 'incomplete'">
+      <td>{{todo.name}}</td>
+      <td>{{todo.category}}</td>
+      <td>
+        <input type="checkbox"  [checked]="todo.completed" (click)="toggleTodo(todo.id)">
+      </td>
+    </tr>
+  </table>
+</div>
