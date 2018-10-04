@@ -28,7 +28,7 @@ export class TodoComponent implements OnInit {
   addTodo(){
     if(this.todoForm.valid){
       this.todoService.addTodo(Object.assign({}, this.todoForm.value))
-      this.todoForm.reset();
+      this.todoForm.reset({'name': '', 'category': ''});
     }
     else{
       this.todoForm.get('name').markAsTouched()

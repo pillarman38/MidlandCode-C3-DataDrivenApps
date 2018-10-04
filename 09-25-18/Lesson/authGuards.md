@@ -6,7 +6,7 @@
 * Can use dependency injection and access other services synchronously or asynchronously in order to obtain the information they need.
 * Can be set to protect/ guard the following interfaces:
     1. CanActivate - Stops from going to a route
-    2. CanActivateChile - Stops access to child routes
+    2. CanActivateChild - Stops access to child routes
     3. CanDeactivate - Stops from leaving a route
     4. Resolve - Can get data before a route is activated
     5. CanLoad - Similar to CanActivate but used for asynchronously loaded modules.
