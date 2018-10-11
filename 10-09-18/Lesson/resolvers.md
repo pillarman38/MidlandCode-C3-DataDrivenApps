@@ -48,7 +48,7 @@ So declaring it is all well and good but that doesn't really help us actually ut
     After that we can simply access the data off the key we declared when setting up our resolver. This is almost always done in the OnInit life cycle hook like so: 
     ``` typescript
           ngOnInit() {
-            this.whateverYouWantToCallIt = this.route.snapshot.data.appRoute;
+            this.whateverYouWantToCallIt = this.route.snapshot.data.appResolver;
         }
     ```
     That key in the component can be used to to literally whatever you want in to template or calling an external service, or anything honestly!

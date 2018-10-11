@@ -1,8 +1,8 @@
 ## Components - 
-    * Every component need at the bare minimum: 
-        1. A class declaring the component
-        2. Some form of template (arguably not needed but without it, what's the point of making this a component as opposed to a service)
-    * Use the `@Component` decorator to set styleUrls, Animations, etc.
+* Every component need at the bare minimum: 
+    1. A class declaring the component
+    2. Some form of template (arguably not needed but without it, what's the point of making this a component as opposed to a service)
+* Use the `@Component` decorator to set styleUrls, Animations, etc.
 
 ## Services
 * Standalone functionality that any component/ other services / directives can use. 
@@ -22,12 +22,12 @@
 ## Routing
 
 So up to this point we've got the following things that we can attach to a route: 
-    * `path:` -  the url segment that you're declaring a route for. If you use `**` it will work for ALL routes not directly declared. if the path is followed by `/:somekey` it is a parameter that can be pulled off the route in the component
-    * `component: SomeComponent` -  the actual component that will be loaded when the route gets loaded
-    * `data:` -  Can be used for multiple things but currently we're using it for animations like: ``{animation: 'NameOfAnimation'}` -  where the value is the state you will use when that route is completed.
-    * `redirectTo: 'someRoute'` - Allows you to redirect from a specific route, generally used with `path: '**'`
-    * `resolve: {key: ResolverName}` - Tells the router that the resolver should fire and data should be stored on a key with the key name.
-    * `canActivate: [ActivationGuard]` - Tells the route to fire the Activation Guard with the name supplied when the route tries to load
+* `path:` -  the url segment that you're declaring a route for. If you use `**` it will work for ALL routes not directly declared. if the path is followed by `/:somekey` it is a parameter that can be pulled off the route in the component
+* `component: SomeComponent` -  the actual component that will be loaded when the route gets loaded
+* `data:` -  Can be used for multiple things but currently we're using it for animations like: ``{animation: 'NameOfAnimation'}` -  where the value is the state you will use when that route is completed.
+* `redirectTo: 'someRoute'` - Allows you to redirect from a specific route, generally used with `path: '**'`
+* `resolve: {key: ResolverName}` - Tells the router that the resolver should fire and data should be stored on a key with the key name.
+* `canActivate: [ActivationGuard]` - Tells the route to fire the Activation Guard with the name supplied when the route tries to load
 
 
 ## AuthGuards
