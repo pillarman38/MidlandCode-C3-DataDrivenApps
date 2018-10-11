@@ -17,7 +17,7 @@ and API call for data.
     * GET - `this.http.get('url', options)` options are hilariously optional.
     * POST - `this.http.post('url', object, options)`
     * DELETE - `this.http.delete('url', options)`
-    * PUT - `this.http.post('url', object, options)`
+    * PUT - `this.http.put('url', object, options)`
 * Generally speaking you would return the call and set up any possible options you would need when declaring the Observable. Remember any of the operators you have are fully usable with the `HttpClient` Library.
 * All you would need to do is then subscribe and pass in the `next()` and `error()` functions to handle any issues. The errors are of type `HttpErrorResponse` and can be passed into an error handler as you see fit. best practice would be to take advantage of the `catchError(errorHandlerFunction)` operator in the pipe for the call.
 * `retry()` being added to the pipe will allow you to declare how many times you can retry the call before handling errors. 
