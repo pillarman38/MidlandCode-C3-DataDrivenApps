@@ -9,7 +9,7 @@ The final angular homework over the weekend is fairly straight forward:
     * Takes some string email input and an optional character input
     * Replaces all but but the first two characters of the email and the last two of the domain with either `*` or the character provided. 
         * No character was provided and the email `mike@example.com` was provided. The email in the tempalte should show `mi**@*****le.com`
-        * The character `F` was provided and the email `a.persons.email@email.com` was provided. The email in the template should show `a.*************@***il.com`
+        * The character `F` was provided and the email `a.persons.email@email.com` was provided. The email in the template should show `a.FFFFFFFFFFFFF@FFFil.com`
         * Think about why this might not be a good idea in a production app. 
 5. If you want more practice with something specific, let me know and I'll provide you with functionality to add.
 

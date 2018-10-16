@@ -1,0 +1,10 @@
+<p>
+  todo works!
+</p>
+<!-- {{todos | json}} -->
+
+<div *ngFor="let todo of todos">
+  {{todo.title}},
+  {{todo.userId}}
+  <input type="checkbox" [(ngModel)]="todo.completed">
+</div>
