@@ -6,7 +6,7 @@
 
  |CUSTOMERS|||||||
  |-|-|-|-|-|-|-|
- |CustomerID|CustomerName|ContactName|Address|City|PostalCode|Count|
+ |CustomerID|CustomerName|ContactName|Address|City|PostalCode|Country|
 
  
  |CATEGORIES|||
@@ -42,13 +42,50 @@
  ## Now that we know our Schema, let's do the following (making sure that the table returns all useful data, not just the bare minimum): 
 1. Find all Customers in the USA or Mexico ordered Alphabetically by Customer Name
     * Solution: 
+    ``` SQL
+    SELECT * FROM [Customers] 
+    WHERE country IN ("Mexico", "USA") 
+    ORDER BY Country, CustomerName DESC
+    ```
 2. Find all Products that cost more than 40
     * Solution: 
-3. FInd all Employees born before 1960.
+    ``` SQL
+    SELECT * FROM Products WHERE PRICE > 40
+    ```
+3. Find all Employees born before 1960.
     * Solution: 
+    ``` SQL
+    SELECT * FROM Employees WHERE BirthDate <  "1960-01-01"
+    ```
 4. Find all Products that are Beverages
     * Solution: 
+    ``` SQL
+    SELECT Products.*, Categories.description FROM Products
+    LEFT OUTER JOIN CATEGORIES ON Products.CATEGORYID = CATEGORIES.CATEGORYID
+    WHERE Categories.categoryID = 1
+    ```
 5. Find all Employees Who have ordered something that shipped to Spain
     * Solution: 
+    ``` SQL
+    SELECT Employees.employeeID, EMPLOYEES.firstname, EMPLOYEES.lastName 
+    FROM Employees
+
+    LEFT OUTER JOIN ORDERS ON EMPLOYEES.EMPLOYEEID = ORDERS.EMPLOYEEID
+    LEFT OUTER JOIN CUSTOMERS ON CUSTOMERS.CUSTOMERID = ORDERS.CUSTOMERID
+
+    WHERE CUSTOMERS.COUNTRY = "Spain"
+
+    GROUP BY EMPLOYEES.EMPLOYEEID
+    ```
 6. Find all Orders with a total price over 2000 sorted from most expensive to least expensive.
     * Solution: 
+    ``` SQL
+    SELECT ORDERDETAILS.ORDERID, SUM(ORDERDETAILS.QUANTITY * PRODUCTS.PRICE) AS TOTALPRICE FROM ORDERDETAILS
+
+    LEFT OUTER JOIN PRODUCTS ON PRODUCTS.PRODUCTID  = ORDERDETAILS.PRODUCTID
+
+    GROUP BY ORDERDETAILS.ORDERID
+    HAVING TOTALPRICE > 2000
+
+    ORDER BY TOTALPRICE DESC
+    ```
