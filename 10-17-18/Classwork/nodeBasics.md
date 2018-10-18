@@ -7,6 +7,32 @@
     * If two numbers aren't provided, send a message to the console that one (or both) of the arguments aren't numbers.
     * If two numbers ARE provided, call the function from the other file.
 
+SOLUTION: 
+``` javascript
+    // FILE 1
+    import {random} from "./secondFile.js"
+    let num1 = parseInt(process.argv[2]);
+    let num2 = parseInt(process.argv[3]);
+
+    if(isNaN(num1) || isNaN(num2)){
+        console.log("You must provide two numbers!")
+    }
+    else{
+        if(num1>num2){
+            console.log(random(num2, num1))
+        }
+        else{
+            console.log(random(num1, num2))
+        }
+    }
+
+
+    //FILE 2
+    export default function random(min,max) {
+        return Math.floor(Math.random()*(max-min+1)+min);
+    }
+```
+
 2. We're going to write a command line API caller.
     * Set up a node file that will take in several arguments.
     * Snag an API key from [here](https://www.alphavantage.co/documentation/)
