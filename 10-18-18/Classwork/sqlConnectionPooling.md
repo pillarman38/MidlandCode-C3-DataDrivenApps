@@ -22,7 +22,6 @@
             if (err.code === 'ECONNREFUSED') {
                 console.error('Database connection was refused.')
             }
-            res.send("Something went wrong");
         }
 
         if (connection) connection.release()
