@@ -25,7 +25,7 @@ I've mentioned it before but if you're on a site that when you ask to reset your
     ``` javascript
         const bcrypt = require('bcrypt');
         const saltRounds = 10 
-        var hash = bcyrpt.hashSync(plainTextPassword, saltRounds);
+        var hash = bcrypt.hashSync(plainTextPassword, saltRounds);
     ```
     That's it!
 * Then you can simply compare the two with: 
