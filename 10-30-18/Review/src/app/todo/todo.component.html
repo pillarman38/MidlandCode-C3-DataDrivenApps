@@ -1,0 +1,20 @@
+<h1>Todos for {{user.username}}</h1>
+<input type="text" [(ngModel)]="newText" placeholder="todoName">
+<button (click)="addTodo()">Add todo</button>
+<div *ngIf="error.err">
+  {{error.err}}
+</div>
+
+<h4>Todos</h4>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Completed</th>
+  </tr>
+<tr *ngFor="let todo of todos">
+  <td>{{todo.id}}</td>
+  <td>{{todo.text}}</td>
+  <td>{{!!todo.completed}}</td>
+</tr>
+</table>

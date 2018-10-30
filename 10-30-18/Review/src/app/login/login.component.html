@@ -1,0 +1,7 @@
+<br><input type="text" [(ngModel)]="username" placeholder="username">
+<br><input type="password" [(ngModel)]="password" placeholder="password">
+<br><button (click)="login()">login</button>
+
+<div *ngIf="error.err">
+  {{error.err | json}}
+</div>
