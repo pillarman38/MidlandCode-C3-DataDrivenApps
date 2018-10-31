@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "postinstall": "ng build --serve",
     "start": "concurrently --kill-others \"ng build --watch\" \"nodemon server.js\" ",
     "back": "nodemon server.js",
     "front": "ng build --watch",
