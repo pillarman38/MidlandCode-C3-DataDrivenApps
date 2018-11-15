@@ -3,24 +3,25 @@
 ## Users
 * addUser - userObject, callback
 * deleteUser -  id, callback
-* getByUsername -  username, callback
-* getById -  id, callback
-* updateUser -  id, keystoupdate, valuestoupdate, callback
+* updateUser -  id, valuesToUpdate, callback
 * getAll -  callback
+* getById -  id, callback
+* getByUsername -  username, callback
+
 
 ## Calendars
-* addCalendar
-* deleteCalendar
-* getById
-* getAll
-* updateCalendar
-* getByUserId
+* addCalendar - calendarObject, callback
+* deleteCalendar - id, callback
+* updateCalendar - id, valuesToUpdate, callback
+* getAll - callback
+* getById - id, callback
+* getByUserId - id, callback
 
 ## Events
-* addEvent
-* deleteEvent
-* updateEvent
-* getAll
-* getById
-* getByCalendarId
-* getByUserId
+* addEvent - eventObject, callback
+* deleteEvent - id, callback
+* updateEvent, id, valuesToUpdate, callback
+* getAll - callback
+* getById - id, callback
+* getByCalendarId - calendarId, callback
+* getByUserId, userId, callback
