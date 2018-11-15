@@ -14,7 +14,7 @@
     * Calendar Routes
         * Create (Create New Calendar like work, or home)
         * Read All (Find all calendars by logged in user)
-        * Read All (Find a calendar by id or name)
+        * Read id (Find a calendar by id or name)
         * Update (Rename Calendar)
         * Delete Calendar (Remove a calendar. Can only be done if no items are on the calendar)
     * Event Routes
